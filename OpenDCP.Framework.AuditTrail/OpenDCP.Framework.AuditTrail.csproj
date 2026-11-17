@@ -1,0 +1,67 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/Roche/dcp-pkg-be-dotnet-audit-trail</RepositoryUrl>
+    <PackageProjectUrl>https://open-dcp.ai/</PackageProjectUrl>
+    <Version>0.1.0</Version>
+		<TargetFramework>net8.0</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="Templates\MSSQLAppendOnlyUnpivot.sql" />
+		<None Remove="Templates\MSSQLAppendOnlyAuditTrailQuery.sql" />
+		<None Remove="Templates\MSSQLAuditTrailQuery.sql" />
+		<None Remove="Templates\MSSQLMetaData.sql" />
+		<None Remove="Templates\MSSQLUnpivot.sql" />
+		<None Remove="Templates\PGSQLAppendOnlyAuditTrailQuery.sql" />
+		<None Remove="Templates\PGSQLAppendOnlyUnpivot.sql" />
+		<None Remove="Templates\PGSQLAuditTrailQuery.sql" />
+		<None Remove="Templates\PGSQLMetaData.sql" />
+		<None Remove="Templates\PGSQLUnpivot.sql" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Include="Templates\PGSQLAppendOnlyUnpivot.sql">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Templates\PGSQLAppendOnlyAuditTrailQuery.sql">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Templates\MSSQLAppendOnlyUnpivot.sql">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Templates\MSSQLAppendOnlyAuditTrailQuery.sql">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Templates\MSSQLAuditTrailQuery.sql">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Templates\MSSQLMetaData.sql">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Templates\MSSQLUnpivot.sql">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Templates\PGSQLAuditTrailQuery.sql">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Templates\PGSQLMetaData.sql">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Templates\PGSQLUnpivot.sql">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</EmbeddedResource>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.22" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="8.0.22" />
+		<PackageReference Include="System.Text.Json" Version="9.0.9" />
+	</ItemGroup>
+
+  <ItemGroup>
+    <None Include="../README.md" Pack="true" PackagePath="" />
+  </ItemGroup>
+</Project>
